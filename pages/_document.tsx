@@ -5,7 +5,6 @@ export default function Document() {
     <Html lang="pl">
       <Head>
         <title>iw4sz's Portfolio</title>
-        <meta property="og:title" content="iw4sz's Portfolio" key="title" />
       </Head>
       <body>
         <Main />

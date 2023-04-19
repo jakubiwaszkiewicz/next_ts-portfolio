@@ -1,19 +1,41 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google';
+import Header from "../components/Header";
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-red-500">Hello world!</h1>
-    </main>
+    <div>
 
-    // {Header}
-    // {Hero}
-    // {About}
-    // {Skills}
-    // {Projects}
-    // {Contact Me}
+    {/* {Header} */}
+
+    <Header/>
+
+    {/* {Hero} */}
+
+
+
+    {/* {About} */}
+
+
+
+    {/* {Experience} */}
+
+
+
+    {/* {Skills} */}
+
+
+
+    {/* {Projects} */}
+
+
+
+    {/* {Contact Me} */}
+
+
+
+    </div>
   )
 }
