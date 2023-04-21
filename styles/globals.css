@@ -8,4 +8,9 @@
         uppercase text-xs tracking-widest text-gray-500 transition-all
          hover:border-[#AA4A44]/60 hover:text-[#AA4A44]/60
     }
+    .contactInput {
+        @apply outline-none bg-slate-500/10 rounded-sm border-b px-6 py-4 border-[#242424]
+        text-gray-500 placeholder-gray-500 transition-all focus:border-[#aa4a44]
+        focus:text-[#aa4a44] hover:border-[#aa4a44]/40 
+    }
 }

@@ -17,7 +17,7 @@ function ExperienceCard({}: Props) {
             opacity: 1,
           }}
           transition={{
-            duration: 1.2
+            duration: 0.5
           }}
           viewport={{once: true}}
           className="w-32 h-23 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"

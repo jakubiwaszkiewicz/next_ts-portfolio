@@ -1,6 +1,7 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
+import Link from "next/link"
 
 type Props = {};
 
@@ -64,18 +65,18 @@ export default function Header({}: Props) {
         
           <div className="flex flex-row items-center"> 
               <SocialIcon
-                url='mailto: kkuba.iwaszkiewicz@gmail.com'
+                url="#contact"
                 className="cursor-pointer"
                 network="email"
                 fgColor="gray"
                 bgColor="transparent"
-                target="_blank"
               />
           </div>
-          <a className="uppercase hidden md:inline-flex text-xs text-gray-400 cursor-pointer" href="mailto: kkuba.iwaszkiewicz@gmail.com">
-            Get in Touch
-          </a>
-        
+          <Link href="#contact">
+            <p className="uppercase hidden md:inline-flex text-xs text-gray-400 cursor-pointer">
+              Get in Touch
+            </p>
+          </Link>
       </motion.div>
     </header>
   );
