@@ -43,7 +43,7 @@ export default function Projects({}: Props) {
                         <p className='text-lg text-center md:text-left'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Pellentesque finibus eleifend dui. Quisque vel libero vel purus sodales fermentum at nec erat.
-                            Quisque sit amet euismod lorem. Sed sed dolor luctus ex feugiat mattis ut ut nisi.
+                            Quisque sit amet euismod lorem. Sed seddfgt'p;ikjswdfp;oujhdfslogphdsrtlouhsdflkjugdfgl;kugdslkrtghdl;rskgdfsl;k dolor luctus ex feugiat mattis ut ut nisi.
                             Cras non nibh ac nibh sodales gravida sit amet ac dui. Donec vitae malesuada metus
                             Morbi consequat fringilla posuere. Fusce blandit fringilla ligula, eu vulputate purus commodo in.
                             Maecenas aliquet purus id maximus ultricies.
