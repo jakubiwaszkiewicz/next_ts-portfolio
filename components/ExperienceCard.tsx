@@ -35,7 +35,7 @@ function ExperienceCard({}: Props) {
             /> */}
             <p>06.2022 - Present</p>
           </div>
-          <ul className='list-disc space-y-4 ml-5 text-lg my-1 h-[250px] overflow-scroll overflow-x-hidden snap-y snap-mandatory'>
+          <ul className='list-disc space-y-4 ml-5 text-lg my-1 h-[250px] overflow-scroll overflow-x-hidden snap-y snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#aa4a44]/80'>
             <li className='snap-start'>Summary point Summary point Summary point Summary point Summary</li>
             <li className='snap-start'>Summary point Summary point Summary point Summary point Summary</li>
             <li className='snap-start'>Summary point Summary point Summary point Summary point Summary</li>

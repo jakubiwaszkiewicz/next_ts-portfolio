@@ -12,7 +12,7 @@ type Inputs = {
 };
 
 function ContactMe({}: Props) {
-
+// ToDO: 
   const { register, handleSubmit } = useForm<FormData>();
   const onSubmit: SubmitHandler<Inputs> = ((formData: any) => 
     window.location.href = `mailto: kkuba.iwaszkiewicz@gmail?subject=${formData.subject}
