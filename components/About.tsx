@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 type Props = {}
 
 function About({}: Props) {
+
+
   return (
     <motion.div
         initial={{
@@ -32,7 +34,7 @@ function About({}: Props) {
                 duration: 0.5,
             }}
             viewport={{ once: true }}
-            className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]'
+            className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[450px] xl:h-[500px]'
         />
 
         <motion.div

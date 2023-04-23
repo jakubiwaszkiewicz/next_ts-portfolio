@@ -30,6 +30,7 @@ export default function Header({}: Props) {
           fgColor="gray"
           bgColor="transparent"
           target="_blank"
+          className="text-[#0e76a8]"
         />
         <SocialIcon
           url="https://github.com/jakubiwaszkiewicz"

@@ -9,6 +9,10 @@ import ContactMe from "@/components/ContactMe";
 import { ArrowLongUpIcon } from '@heroicons/react/24/solid'
 import Link from "next/link";
 
+type Props = {
+  
+}
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -62,4 +66,8 @@ export default function Home() {
 
     </div>
   );
+}
+
+export const getStaticProps = async () => {
+
 }

@@ -12,16 +12,16 @@ type Inputs = {
 };
 
 function ContactMe({}: Props) {
-// ToDO: 
-  const { register, handleSubmit } = useForm<FormData>();
+// ToDO: backend for making emails without mail application
+  const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = ((formData: any) => 
-    window.location.href = `mailto: kkuba.iwaszkiewicz@gmail?subject=${formData.subject}
+    window.location.href = `mailto: kkuba.iwaszkiewicz@gmail.com?subject=${formData.subject}
     &body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`
   );
 
   return (
     <div className='relative h-screen flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
-        <h1 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+        <h1 className='absolute top-[24px] uppercase tracking-[20px] text-gray-500 text-2xl'>
             Contact
         </h1>
 

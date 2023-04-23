@@ -20,7 +20,7 @@ function ExperienceCard({}: Props) {
             duration: 0.5
           }}
           viewport={{once: true}}
-          className="w-32 h-23 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+          className="w-[100px] h-[100px] rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
           src="./best_logo.png"
           alt=""
         />
@@ -35,11 +35,13 @@ function ExperienceCard({}: Props) {
             /> */}
             <p>06.2022 - Present</p>
           </div>
-          <ul className='list-disc space-y-4 ml-5 text-lg my-1 h-[250px] overflow-scroll overflow-x-hidden snap-y snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#aa4a44]/80'>
-            <li className='snap-start'>Summary point Summary point Summary point Summary point Summary</li>
-            <li className='snap-start'>Summary point Summary point Summary point Summary point Summary</li>
-            <li className='snap-start'>Summary point Summary</li>
-            <li className='snap-start'>Summary point Summary</li>
+          <ul className='list-disc space-y-2 ml-5 text-lg my-1 h-[225px] overflow-scroll overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#aa4a44]/80'>
+            <li className=''>Summary point Summary point Summary point Summary point Summary</li>
+            <li className=''>Summary point Summary point Summary point Summary point Summary</li>
+            <li className=''>Summary point Summary</li>
+            <li className=''>Summary point Summary</li>
+            <li className=''>Summary point Summary</li>
+            <li className=''>Summary point Summary</li>
           </ul>
         </div>
     </article>
