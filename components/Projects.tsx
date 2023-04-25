@@ -1,10 +1,12 @@
 import React from 'react'
 import { motion } from "framer-motion"
-type Props = {}
+import { Project } from "@/typings"
+import { urlFor } from '@/sanity'
+type Props = {
+    projects: Project[]
+}
 
-export default function Projects({}: Props) {
-    const projects =[1, 2, 3, 4, 5]
-
+export default function Projects({ projects }: Props) {
 
   return (
     <div className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-2-full
@@ -19,6 +21,7 @@ export default function Projects({}: Props) {
         >
             {projects.map((project, i) => (
                 <div
+                    key={project._id}
                     className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5
                     items-center justify-center p-20 md:p-33 h-screen'
                 >
@@ -35,7 +38,7 @@ export default function Projects({}: Props) {
                             duration: 1,
                         }}
                         viewport={{ once:true }}
-                        src="./project-1.png"
+                        src={urlFor(project.image).url()}
                         alt=""
                         className='rounded-2xl shadow-xl max-w-[500px]'
 
@@ -43,17 +46,24 @@ export default function Projects({}: Props) {
                     <div className='space-y-4 lg:space-y-10 px-0 md:px-10 max-w-6xl'>
                         <h4 className='text-center font-semibold lg:text-4xl text-xl'>
                             <span className="underline decoration-[#AA4A44] text-center underline-offset-8">
-                                Case Study {i + 1} of {projects.length}: 
+                                Project {i + 1} of {projects.length}: 
                             </span>
-                            {" "} UPS clone
+                            {" "} {project.title}
                         </h4>
+
+                        <div className='flex flex-row items-center justify-center space-x-3'>
+                            {project?.technologies.map((technology) => (
+                                <img
+                                    key={technology._id}
+                                    src={urlFor(technology.image).url()}
+                                    alt=""
+                                    className='h-10 w-10'
+                                />
+                            ))}
+                        </div>
+
                         <p className='text-sm text-center md:text-left'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Pellentesque finibus eleifend dui. Quisque vel libero vel purus sodales fermentum at nec erat.
-                            Quisque sit amet euismod lorem. dolor luctus ex feugiat mattis ut ut nisi.
-                            Cras non nibh ac nibh sodales gravida sit amet ac dui. Donec vitae malesuada metus
-                            Morbi consequat fringilla posuere. Fusce blandit fringilla ligula, eu vulputate purus commodo in.
-                            Maecenas aliquet purus id maximus ultricies.
+                            {project.summary}
                         </p>
                         
                     </div>

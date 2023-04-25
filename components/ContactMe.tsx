@@ -1,8 +1,12 @@
 import React from 'react'
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { PageInfo } from '@/typings'
+import pageInfo from '@/sanity/schemas/pageInfo';
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo,
+}
 
 type Inputs = {
   name: string;
@@ -11,7 +15,7 @@ type Inputs = {
   message: string,
 };
 
-function ContactMe({}: Props) {
+function ContactMe({pageInfo}: Props) {
 // ToDO: backend for making emails without mail application
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = ((formData: any) => 
@@ -27,29 +31,29 @@ function ContactMe({}: Props) {
 
         <div className='flex flex-col space-y-10'>
           <h4 className='text-3xl lg:text-4xl font-semibold text-center'>
-            If I've got just what you need, {" "}
-            <span className='underline decoration-[#AA4A44]/70 underline-offset-8'>Let's talk!</span> 
+            If I&apos;ve got just what you need, {" "}
+            <span className='underline decoration-[#AA4A44]/70 underline-offset-8'>Let&apos;s talk!</span> 
           </h4>
 
           <div className='flex items-center space-x-5 justify-center'>
             <PhoneIcon
               className='animate-pulse h-7 w-7 text-[#AA4A44]'
             />
-            <p className="text-2xl">+48536173333</p>
+            <p className="text-2xl">{pageInfo.phoneNumber}</p>
           </div>
 
           <div className='flex items-center space-x-5 justify-center'>
             <EnvelopeIcon
               className='animate-pulse h-7 w-7 text-[#AA4A44]'
             />
-            <p className="text-2xl">kkuba.iwaszkiewicz@gmail.com</p>
+            <p className="text-2xl">{pageInfo.email}</p>
           </div>
 
           <div className='flex items-center space-x-5 justify-center'>
             <MapPinIcon
               className='animate-pulse h-7 w-7 text-[#AA4A44]'
             />
-            <p className="text-2xl">Poland - Wroclaw</p>
+            <p className="text-2xl">{pageInfo.address}</p>
           </div>
 
           <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>

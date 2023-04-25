@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
   <>
     <Head>
       <title>
-        iw4sz's Portfolio
+        iw4sz Portfolio
       </title>
     </Head>
     <Component {...pageProps} />
