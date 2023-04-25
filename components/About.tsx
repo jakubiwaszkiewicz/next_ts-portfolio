@@ -1,9 +1,13 @@
 import React from 'react'
 import { motion } from "framer-motion";
+import { PageInfo } from "@/typings"
+import { urlFor } from '@/sanity';
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo;
+}
 
-function About({}: Props) {
+function About({ pageInfo }: Props) {
 
 
   return (
@@ -19,9 +23,9 @@ function About({}: Props) {
         }}
         className='flex flex-col relative h-screen text-center md:text:left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'
     >
-        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl transform -translate-x-[-10px]'>About</h3>
+        <h3 className='sectionTitle'>About</h3>
         <motion.img
-            src="/prof-sesja-2.png"
+            src={urlFor(pageInfo?.profileImage).url()}
             initial={{
                 x: -200,
                 opacity: 0,
@@ -52,13 +56,8 @@ function About({}: Props) {
             <h4 className="text-4xl font-semibold">
                 Hello <span className='underline decoration-[#AA4A44]/80 tracking-widest underline-offset-8'>there!</span> 
             </h4>
-            <p className='text-md text-justify'>
-                I'm a tech-savvy second-year student of ICT at the Wrocław University of Technology. You can catch me creating some slick websites like a pro(toplast)!
-                In my quest for experience, I've taken on some pretty wild jobs. I've rocked a hard hat as a construction assistant in Bonn,
-                lifted boxes as a warehouse worker at Amazon in Wrocław, and even put together some of BMW's coolest G30 as a on-board computer assembler in Munich.
-                Nowadays, you can find me at the Student Organization Best Wroclaw, where I'm the IT Coordinator. I'm also flexing my design skills by whipping up some graphics for the Best Symposium on Education event.
-                But wait, there's more! I'm on the hunt for my first gig in IT, and I think your company might just be the perfect fit.
-                In the long run, I'm striving to be a full-stack developer and take on the world one code at a time.
+            <p className='md:text-base text-sm'>
+                {pageInfo?.backgroundInformation}
             </p>
         </motion.div>
     </motion.div>

@@ -13,4 +13,7 @@
         text-gray-500 placeholder-gray-500 transition-all focus:border-[#aa4a44]
         focus:text-[#aa4a44] hover:border-[#aa4a44]/40 
     }
+    .sectionTitle {
+        @apply absolute top-16 uppercase tracking-[16px] xl:tracking-[20px] text-gray-500 text-xl transform -translate-x-[-10px] md:text-2xl
+    }
 }

@@ -21,14 +21,13 @@ function ContactMe({}: Props) {
 
   return (
     <div className='relative h-screen flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
-        <h1 className='absolute top-[24px] uppercase tracking-[20px] text-gray-500 text-2xl'>
+        <h1 className='sectionTitle'>
             Contact
         </h1>
 
         <div className='flex flex-col space-y-10'>
-          <h4 className='text-4xl font-semibold text-center'>
-            If I've got just what you need,
-            <br />
+          <h4 className='text-3xl lg:text-4xl font-semibold text-center'>
+            If I've got just what you need, {" "}
             <span className='underline decoration-[#AA4A44]/70 underline-offset-8'>Let's talk!</span> 
           </h4>
 

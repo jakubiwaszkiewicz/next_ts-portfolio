@@ -9,7 +9,7 @@ export default function Projects({}: Props) {
   return (
     <div className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-2-full
     justify-evenly mx-auto items-center z-0'>
-        <h1 className='absolute top-[24px] uppercase tracking-[20px] text-gray-500 text-2xl'>
+        <h1 className='sectionTitle'>
             Projects
         </h1>
 
@@ -40,17 +40,17 @@ export default function Projects({}: Props) {
                         className='rounded-2xl shadow-xl max-w-[500px]'
 
                     />
-                    <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                        <h4 className='text-center font-semibold text-4xl'>
+                    <div className='space-y-4 lg:space-y-10 px-0 md:px-10 max-w-6xl'>
+                        <h4 className='text-center font-semibold lg:text-4xl text-xl'>
                             <span className="underline decoration-[#AA4A44] text-center underline-offset-8">
                                 Case Study {i + 1} of {projects.length}: 
                             </span>
                             {" "} UPS clone
                         </h4>
-                        <p className='text-lg text-center md:text-left'>
+                        <p className='text-sm text-center md:text-left'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Pellentesque finibus eleifend dui. Quisque vel libero vel purus sodales fermentum at nec erat.
-                            Quisque sit amet euismod lorem. Sed seddfgt'p;ikjswdfp;oujhdfslogphdsrtlouhsdflkjugdfgl;kugdslkrtghdl;rskgdfsl;k dolor luctus ex feugiat mattis ut ut nisi.
+                            Quisque sit amet euismod lorem. dolor luctus ex feugiat mattis ut ut nisi.
                             Cras non nibh ac nibh sodales gravida sit amet ac dui. Donec vitae malesuada metus
                             Morbi consequat fringilla posuere. Fusce blandit fringilla ligula, eu vulputate purus commodo in.
                             Maecenas aliquet purus id maximus ultricies.

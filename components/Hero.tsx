@@ -4,13 +4,17 @@ import BackgroundCircles from './BackgroundCircles';
 import pic from "./../public/prof-sesja-1.png"
 import Image from 'next/image'
 import Link from "next/link"
+import { PageInfo } from "@/typings"
+import { urlFor } from '@/sanity';
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo;
+}
 
-function Hero({}: Props) {
+function Hero({ pageInfo }: Props) {
     const [text, count] = useTypewriter({
         words:[
-            "Hi, My Name's Jakub!",
+            `Hi, My Name's ${pageInfo?.name}!`,
             "ICT-student.tsx",
             "CantWorkWithout: \"Coffee\"",
             "<fall_in_love_with_react />",
@@ -23,14 +27,14 @@ function Hero({}: Props) {
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
       <BackgroundCircles />
-        <Image
-          src={pic}
+        <img
+          src={urlFor(pageInfo?.heroImage).url()}
           className='relative rounded-full h-40 w-40 mx-auto object-cover'
-          alt={''}
+          alt=''
         />
         <div className='z-20'>
           <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
-            Software Engineer
+            {pageInfo?.role}
           </h2>
           <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
             <span className='text-white z-10'>{text}</span>

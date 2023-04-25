@@ -1,6 +1,6 @@
 import { Experience } from "../typings"
 
-const constfetchExperience = async () => {
+export const fetchExperience = async () => {
     const respose = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getExperience`);
     const data = await respose.json()
     const experiences: Experience[] = data.experiences;
@@ -10,4 +10,3 @@ const constfetchExperience = async () => {
     return experiences;
 }
 
-export default constfetchExperience;
