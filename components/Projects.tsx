@@ -22,7 +22,7 @@ export default function Projects({ projects }: Props) {
             {projects.map((project, i) => (
                 <div
                     key={project._id}
-                    className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5
+                    className='w-screen flex-shrink-1 snap-center flex flex-col space-y-5
                     items-center justify-center p-20 md:p-33 h-screen'
                 >
                     <motion.img
@@ -40,7 +40,7 @@ export default function Projects({ projects }: Props) {
                         viewport={{ once:true }}
                         src={urlFor(project.image).url()}
                         alt=""
-                        className='rounded-2xl shadow-xl max-w-[500px]'
+                        className='rounded-2xl shadow-xl max-w-[500px] '
 
                     />
                     <div className='space-y-4 lg:space-y-10 px-0 md:px-10 max-w-6xl'>
@@ -57,7 +57,7 @@ export default function Projects({ projects }: Props) {
                                     key={technology._id}
                                     src={urlFor(technology.image).url()}
                                     alt=""
-                                    className='h-10 w-10'
+                                    className='md:h-10 md:w-10 w-7 h-7'
                                 />
                             ))}
                         </div>
